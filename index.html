@@ -13,11 +13,17 @@
           }
       }
 
-      function setup() {
-        document.cookie = "user=John";
+      function setCookie(String s) (
+        document.cookie = "user="+s;
+      }
+
+      function logCoocies() {
         console.log( document.cookie );
         console.debug( document.cookie );
-        console.log(httpGet("file:///C:/Program Files/7-Zip/Lang/ru.txt"));
+      }
+
+      function setup() {
+        //console.log(httpGet("file:///C:/Program Files/7-Zip/Lang/ru.txt"));
       }
 
       function draw() {
